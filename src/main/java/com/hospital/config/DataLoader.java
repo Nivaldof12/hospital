@@ -5,11 +5,13 @@ import com.hospital.model.Paciente;
 import com.hospital.repository.MedicoRepository;
 import com.hospital.repository.PacienteRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
 @Component
+@Profile("!test")
 public class DataLoader implements CommandLineRunner {
 
     private final MedicoRepository medicoRepository;
